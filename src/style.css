@@ -118,6 +118,9 @@ body{
     gap: 1rem;
     min-height: 20vh;
   }
+  .main div.results > div:not(:last-child){
+    border-right: 1px solid var(--neutral-400);
+  }
   .main h1{
     font-size: 2rem;
   }
