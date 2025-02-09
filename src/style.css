@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+  --neutral-700: hsl(0, 0%, 17%);
+  --neutral-400: hsl(0, 0%, 59%);
+  --neutral-100: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background: var(--neutral-100);
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Rubik";
+}
+
+.main {
+    background: url('/pattern-bg-mobile.png') no-repeat;
+    background-size: cover;
+    height: 20vh;
+    padding: .7rem;
+}
+
+#map {
+  height: 80vh;
+}
+
+.main h1{
+  text-align: center;
+  color: var(--neutral-100);
+  padding: 1.5rem 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+#form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#form input {
+  padding: 1rem 1.25rem;
+  border: none;
+  font-size: 1rem;
+  border-radius: 1em 0 0 1em;
+  font-weight: 500;
+  color: var(--neutral-700);
+  width: 380px;
+  max-width: 70%;
+}
+
+#form input:focus {
+  outline: none;
+}
+
+#form button {
+  padding: 1rem 1.5rem;
+  background-color: black;
+  border: none;
+  border-radius: 0 1em 1em 0;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+#form button:hover {
+  background-color: var(--neutral-700);
+}
+
+.main div.results {
+  position: relative;
+  background: var(--neutral-100);
+  z-index: 999;
+  padding: 1.5rem 0;
+  border-radius: 1em;
+  margin: 0 auto;
+  top: 20%;
+  text-align: center;
+  max-width: 75vw;
+}
+
+.main div.results > div{
+  width: 100%;
+  padding: 0 1.5rem;
+}
+
+.main div.results .information {
+  color: var(--neutral-400);
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+.main div.results .result {
+  margin: .5rem 0;
+  font-weight: 500;
+  font-size: .9rem;
+  word-break: break-all;
+}
+
+@media screen and (min-width: 770px) {
+  .main {
+    background: url(/pattern-bg-desktop.png) no-repeat;
+    background-size: cover;
+    height: 35vh;
+  }
+  .main div.results {
+    max-width: 85vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+    text-align: start;
+    gap: 1rem;
+    min-height: 20vh;
+  }
+  .main h1{
+    font-size: 2rem;
+  }
+  #map {
+    height: 65vh;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    padding: 0;
+  }
+  .main div.results {
+    max-width: 80%;
+  }
+  .main div.results > div{
+    width: 25%;
+  }
+  .main div.results .information {
+    font-weight: 700;
+    letter-spacing: 3px;
+  }
+  .main div.results .result {
+    margin: .5rem 0;
+    font-weight: 500;
+    font-size: 1rem;
+    word-wrap: break-word;
+    letter-spacing: 2px;
+  }
+}
